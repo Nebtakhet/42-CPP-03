@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:13:38 by cesasanc          #+#    #+#             */
-/*   Updated: 2024/12/13 13:41:15 by cesasanc         ###   ########.fr       */
+/*   Updated: 2024/12/13 18:06:10 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,40 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 	return (*this);
 }
 
+void	ClapTrap::attack(const std::string &target)
+{
+	if (hitPoints > 0 && energyPoints > 0)
+	{
+		energyPoints--;
+		std::cout << "ClapTrap " << name << "attacks" << target << ", causing" << attackDamage << " points of damage!" << std::endl;
+	}
+	else if (hitPoints <= 0)
+		std::cout << "ClapTrap " << name << " cannot attack because it has no hit points!" << std::endl;
+	else
+		std::cout << "ClapTrap " << name << " cannot attack because it has no energy points!" << std::endl;
+}
+
+void	ClapTrap::takeDamage(unsigned int amount)
+{
+	hitPoints -= amount;
+	if (hitPoints < 0)
+		hitPoints = 0;
+	std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!" << std:: endl;
+	std::cout << "Remaining hit points: " << hitPoints << std::endl;
+}
+
+void	ClapTrap::beRepaired(unsigned int amount)
+{
+	if (hitPoints > 0 && energyPoints > 0)
+	{
+		energyPoints--;
+		hitPoints += amount;
+		std::cout << "ClapTrap " << name << " repairs itself for " << amount << " hit points!" << std::endl;
+		std::cout << "Current hit points: " << hitPoints << std::endl;
+	}
+	else if (hitPoints <= 0)
+		std::cout << "ClapTrap " << name << " can't repair itself becase it has no hit points left!" << std:: endl;
+	else
+		std::cout << "ClapTrap " << name << " can't repair itself becase it has no energy points left!" << std:: endl;
+
+}
