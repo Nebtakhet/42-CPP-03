@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:13:38 by cesasanc          #+#    #+#             */
-/*   Updated: 2024/12/13 18:06:10 by cesasanc         ###   ########.fr       */
+/*   Updated: 2024/12/16 14:47:15 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	ClapTrap::attack(const std::string &target)
 	if (hitPoints > 0 && energyPoints > 0)
 	{
 		energyPoints--;
-		std::cout << "ClapTrap " << name << "attacks" << target << ", causing" << attackDamage << " points of damage!" << std::endl;
+		std::cout << "ClapTrap " << name << " attacks " << target << ", causing " << attackDamage << " points of damage!" << std::endl;
 	}
 	else if (hitPoints <= 0)
 		std::cout << "ClapTrap " << name << " cannot attack because it has no hit points!" << std::endl;

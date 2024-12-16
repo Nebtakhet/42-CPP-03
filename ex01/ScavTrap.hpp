@@ -6,14 +6,14 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:38:58 by cesasanc          #+#    #+#             */
-/*   Updated: 2024/12/16 13:27:04 by cesasanc         ###   ########.fr       */
+/*   Updated: 2024/12/16 14:33:44 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_H
-# define SAVTRAP_H
+# define SCAVTRAP_H
 
-#include "ClapTrap.hpp"
+# include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
 {
