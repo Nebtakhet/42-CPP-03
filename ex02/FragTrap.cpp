@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 22:45:47 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/12 23:00:19 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/01/26 18:09:30 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,21 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 	energyPoints = 100;
 	attackDamage = 30;
 	std::cout << "FragTrap " << name << " has been constructed" << std::endl;
+}
+
+FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
+{
+	std::cout << "FragTrap " << name << " has been copied" << std::endl;
+}
+
+FragTrap	&FragTrap::operator=(const FragTrap &other)
+{
+	if (this != &other)
+	{
+		ClapTrap::operator=(other);
+		std::cout << "FragTrap " << name << " has been assigned" << std::endl;
+	}
+	return (*this);
 }
 
 FragTrap::~FragTrap()

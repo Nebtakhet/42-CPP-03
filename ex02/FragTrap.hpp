@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 22:44:15 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/12 22:58:12 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/01/26 18:09:00 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ class FragTrap : public ClapTrap
 {
 	public:
 		FragTrap(const std::string &name);
+		FragTrap(const FragTrap &other);
+		FragTrap	&operator=(const FragTrap &other);
 		~FragTrap();
 
 		void highFivesGuys();
