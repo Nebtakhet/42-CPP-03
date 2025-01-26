@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:13:11 by cesasanc          #+#    #+#             */
-/*   Updated: 2024/12/16 14:50:34 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/01/26 17:51:18 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,35 @@
 
 int	main()
 {
+	std::cout << "ClapTrap attack, beRepaired and takeDamage\n" << std::endl;	
+	
 	ClapTrap clap("Clapper");
-
+	
 	clap.attack("Bob");
 	clap.takeDamage(3);
 	clap.beRepaired(5);
-    clap.attack("Jose");
-    clap.takeDamage(15);
-    clap.beRepaired(10);
 
-	ClapTrap clap2 = clap;
-	clap2.attack("Fifo");
-	 
-	 ClapTrap clap3("Smasher");
-	 clap3 = clap;
-	 clap3.takeDamage(2);
+	std::cout << "\nScavTrap attack, beRapaired and takeDamage\n" << std::endl;
+	
+	ScavTrap scav("Scavvy");
 
-	 return (0);
+	scav.attack("Roberto");
+	scav.takeDamage(3);
+	scav.beRepaired(5);
+	scav.guardGate();
+
+	std::cout << "\nScavTrap copy constructor\n" << std::endl;
+	
+	ScavTrap scav2(scav);
+	scav2.attack("Fifo");
+	
+	std::cout << "\nScavTrap assignation operator\n" << std::endl;
+	
+	ScavTrap scav3("Scavenger");
+	scav3 = scav;
+	scav3.takeDamage(2);
+
+	std::cout << std::endl;
+
+	return (0);
 }
