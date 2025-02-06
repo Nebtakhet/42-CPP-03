@@ -6,7 +6,7 @@
 #    By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/13 13:13:00 by cesasanc          #+#    #+#              #
-#    Updated: 2025/01/12 22:00:04 by cesasanc         ###   ########.fr        #
+#    Updated: 2025/02/06 11:48:31 by cesasanc         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,6 @@ NAME = ClapScavFrag
 
 SRCS =	main.cpp \
 		ClapTrap.cpp \
-		ScavTrap.cpp \
 		FragTrap.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
