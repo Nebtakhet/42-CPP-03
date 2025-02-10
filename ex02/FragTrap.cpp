@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 22:45:47 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/26 18:09:30 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/10 19:17:07 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 
 FragTrap::FragTrap(const FragTrap &other) : ClapTrap(other)
 {
-	std::cout << "FragTrap " << name << " has been copied" << std::endl;
+	std::cout << "FragTrap " << other.name << " has been copied" << std::endl;
 }
 
 FragTrap	&FragTrap::operator=(const FragTrap &other)
