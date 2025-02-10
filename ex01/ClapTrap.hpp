@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:13:28 by cesasanc          #+#    #+#             */
-/*   Updated: 2024/12/16 14:59:07 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/10 18:50:18 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ class	ClapTrap
 {
 	protected:
 		std::string	name;
-		int			hitPoints;
-		int			energyPoints;
-		int			attackDamage;
+		unsigned int	hitPoints;
+		unsigned int	energyPoints;
+		unsigned int	attackDamage;
 
 	public:
 		ClapTrap(const std::string &name);

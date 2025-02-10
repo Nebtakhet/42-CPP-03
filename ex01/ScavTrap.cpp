@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:39:13 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/26 18:03:38 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/10 18:54:54 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name)
 {
-	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
 	std::cout << "ScavTrap " << name << " has been created" << std::endl;
 }
 
@@ -27,7 +24,7 @@ ScavTrap::~ScavTrap()
 
 ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
 {
-	std::cout << "ScavTrap " << other.name << " has been copied" << std::endl;
+	std::cout << "ScavTrap " << name << " has been copied" << std::endl;
 }
 
 ScavTrap	&ScavTrap::operator=(const ScavTrap &other)
