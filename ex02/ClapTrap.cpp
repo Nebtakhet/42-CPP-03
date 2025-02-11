@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:13:38 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/02/11 13:12:16 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/11 13:27:29 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* Constructor */
 ClapTrap::ClapTrap(const std::string &name)
-	: name(name), hitPoints(100), energyPoints(100), attackDamage(30)
+	: name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << "ClapTrap " << name << " has been created" << std::endl;
 }
