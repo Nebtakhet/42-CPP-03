@@ -6,30 +6,33 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:13:38 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/02/10 19:13:29 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/11 13:12:16 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+/* Constructor */
 ClapTrap::ClapTrap(const std::string &name)
 	: name(name), hitPoints(100), energyPoints(100), attackDamage(30)
 {
 	std::cout << "ClapTrap " << name << " has been created" << std::endl;
 }
 
+/* Destructor */
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap " << name << " has been destroyed" << std::endl;
 }
 
-
+/* Copy constructor */
 ClapTrap::ClapTrap(const ClapTrap &other)
 	: name(other.name + "_copy"), hitPoints(other.hitPoints), energyPoints(other.energyPoints), attackDamage(other.attackDamage)
 {
 	std::cout << "ClapTrap " << name << " has been copied" << std::endl;
 }
 
+/* Assignment operator */
 ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 {
 	if (this != &other)
@@ -43,6 +46,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &other)
 	return (*this);
 }
 
+/* Member function for ClapTrap to attack a target */
 void	ClapTrap::attack(const std::string &target)
 {
 	if (hitPoints <= 0)
@@ -56,6 +60,7 @@ void	ClapTrap::attack(const std::string &target)
 	}
 }
 
+/* Member function for ClapTrap to take damage */
 void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (amount >= hitPoints)
@@ -66,6 +71,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 	std::cout << "Remaining hit points: " << hitPoints << std::endl;
 }
 
+/* Member function for ClapTrap to be repaired */
 void	ClapTrap::beRepaired(unsigned int amount)
 {
 	if (hitPoints > 0 && energyPoints > 0)
