@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 12:38:58 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/01/26 17:25:18 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/24 11:45:49 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 class ScavTrap : public ClapTrap
 {
 	public:
+		ScavTrap();
 		ScavTrap(const std::string &name);
 		~ScavTrap();
 		ScavTrap(const ScavTrap &other);

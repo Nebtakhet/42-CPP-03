@@ -6,7 +6,7 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:13:28 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/02/11 13:29:06 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/24 11:42:08 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class	ClapTrap
 		unsigned int	attackDamage;
 
 	public:
+		ClapTrap();
 		ClapTrap(const std::string &name);
 		virtual ~ClapTrap();
 		ClapTrap(const ClapTrap &other);

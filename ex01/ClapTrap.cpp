@@ -6,13 +6,20 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/13 13:13:38 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/02/11 13:23:47 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/24 11:51:27 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-/* Constructor */
+/* Default Constructor */
+ClapTrap::ClapTrap()
+	: name("default"), hitPoints(10), energyPoints(10), attackDamage(0)
+{
+	std::cout << "ClapTrap " << name << " has been created by default" << std::endl;
+}
+
+/* Constructor with parameters */
 ClapTrap::ClapTrap(const std::string &name)
 	: name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
@@ -65,6 +72,8 @@ void	ClapTrap::takeDamage(unsigned int amount)
 {
 	if (amount >= hitPoints)
 		hitPoints = 0;
+	if (hitPoints == 0)
+		std::cout << "ClapTrap " << name << " has no hit points left!" << std::endl;
 	else
 		hitPoints -= amount;
 	std::cout << "ClapTrap " << name << " takes " << amount << " points of damage!" << std:: endl;

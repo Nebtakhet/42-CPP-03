@@ -6,13 +6,22 @@
 /*   By: cesasanc <cesasanc@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 22:45:47 by cesasanc          #+#    #+#             */
-/*   Updated: 2025/02/11 13:12:56 by cesasanc         ###   ########.fr       */
+/*   Updated: 2025/02/24 11:52:56 by cesasanc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-/* Constructor */
+/* Default Constructor */
+FragTrap::FragTrap() : ClapTrap()
+{
+	hitPoints = 100;
+	energyPoints = 100;
+	attackDamage = 30;
+	std::cout << "FragTrap " << name << " has been constructed by default" << std::endl;
+}
+
+/* Constructor with parameters*/
 FragTrap::FragTrap(const std::string &name) : ClapTrap(name)
 {
 	hitPoints = 100;
